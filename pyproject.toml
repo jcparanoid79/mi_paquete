@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]  # Dependencias para construir el paquete
+build-backend = "setuptools.build_meta" # El backend a usar
+
+[project]
+name = "mi-paquete-ejemplo"         # Nombre para PyPI (con guiones)
+version = "0.1.0"
+authors = [
+  { name="Tu Nombre", email="tu.email@ejemplo.com" },
+]
+description = "Un paquete de ejemplo simple."
+readme = "README.md"                # Archivo con la descripción larga
+requires-python = ">=3.8"           # Versión mínima de Python requerida
+classifiers = [                     # Metadatos para clasificar el paquete
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [                    # Dependencias de ejecución del paquete
+    # "requests>=2.20.0",
+    # "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/tu_usuario/mi_proyecto"
+Issues = "https://github.com/tu_usuario/mi_proyecto/issues"
+
+# Opcional: Especificar dónde encontrar el código (si usas layout src/)
+[tool.setuptools.packages.find]
+where = ["src"]  # Busca paquetes dentro del directorio 'src'
